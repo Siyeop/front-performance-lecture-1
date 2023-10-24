@@ -9,10 +9,12 @@ const ViewPage = lazy(() => import('./pages/ViewPage/index'));
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path="/" component={ListPage} exact />
-        <Route path="/view/:id" component={ViewPage} exact />
-      </Switch>
+      <Suspense fallback={'로딩 중...'}>
+        <Switch>
+          <Route path="/" component={ListPage} exact />
+          <Route path="/view/:id" component={ViewPage} exact />
+        </Switch>
+      </Suspense>
     </div>
   )
 }
