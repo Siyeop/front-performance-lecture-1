@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "serve": "npm run build && node ./node_modules/serve/bin/serve.js -l 5001 -u -s build",
+    "serve": "npm run build && node ./node_modules/serve/bin/serve.js -l 5001 -s build",
     "server": "node ./node_modules/json-server/lib/cli/bin.js --watch ./server/database.json -c ./server/config.json"
   },
   "eslintConfig": {
